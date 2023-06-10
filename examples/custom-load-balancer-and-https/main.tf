@@ -54,7 +54,7 @@ resource "aws_lb_listener_rule" "metabase_listener_rule" {
 }
 
 module "metabase" {
-  source = "github.com/josersanvil/matabase-ecs-tf"
+  source = "github.com/josersanvil/metabase-ecs-tf"
 
   vpc_id                   = data.aws_vpc.default_vpc.id
   route_53_domain_name     = data.aws_route53_zone.domain.name

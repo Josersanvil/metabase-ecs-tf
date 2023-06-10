@@ -43,7 +43,7 @@ For more advanced usages take a look at the [examples folder](./examples/).
 
 ## Deploy
 
-Deploy the infrastructure to AWS just run `terraform apply` and approve the changes after reviewing the generated plan.
+To deploy the infrastructure to AWS just run `terraform apply` and approve the changes after reviewing the generated plan.
 
 ## Clean
 

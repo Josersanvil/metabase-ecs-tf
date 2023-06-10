@@ -43,7 +43,7 @@ resource "aws_efs_access_point" "access_point" {
 }
 
 module "metabase" {
-  source = "../../."
+  source = "github.com/josersanvil/metabase-ecs-tf"
 
   vpc_id                            = data.aws_vpc.default-vpc.id
   subdomain_name                    = "metabase"
