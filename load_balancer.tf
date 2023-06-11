@@ -30,6 +30,15 @@ resource "aws_lb_target_group" "metabase_target" {
     type            = "lb_cookie"
   }
 
+  health_check {
+    path                = "/api/health"
+    matcher             = "200-299"
+    healthy_threshold   = 3
+    interval            = 30
+    timeout             = 5
+    unhealthy_threshold = 3
+  }
+
   target_type = "ip"
   vpc_id      = local.metabase_vpc_id
 }

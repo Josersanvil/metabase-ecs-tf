@@ -23,10 +23,10 @@ locals {
   }
   container_health_check = {
     command     = ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]
-    interval    = 10
+    interval    = 30
     retries     = 3
     startPeriod = 60
-    timeout     = 10
+    timeout     = 5
   }
 }
 
