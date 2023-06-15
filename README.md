@@ -14,7 +14,7 @@ data "aws_vpc" "default-vpc" {
 }
 
 module "metabase" {
-  source = "../../modules/metabase"
+  source = "github.com/josersanvil/metabase-ecs-tf"
 
   vpc_id                            = data.aws_vpc.default-vpc.id
 }
@@ -29,7 +29,7 @@ data "aws_route53_zone" "example" {
 }
 
 module "metabase" {
-  source = "../../modules/metabase"
+  source = "github.com/josersanvil/metabase-ecs-tf"
 
   vpc_id                            = data.aws_vpc.default-vpc.id
   domain_name                       = data.aws_route53_zone.example.name
